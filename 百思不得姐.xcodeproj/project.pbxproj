@@ -10,9 +10,7 @@
 		07F7FD5C1D1E5F00006AAC9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD5B1D1E5F00006AAC9F /* main.m */; };
 		07F7FD5F1D1E5F00006AAC9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD5E1D1E5F00006AAC9F /* AppDelegate.m */; };
 		07F7FD621D1E5F00006AAC9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD611D1E5F00006AAC9F /* ViewController.m */; };
-		07F7FD651D1E5F00006AAC9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F7FD631D1E5F00006AAC9F /* Main.storyboard */; };
 		07F7FD671D1E5F00006AAC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F7FD661D1E5F00006AAC9F /* Assets.xcassets */; };
-		07F7FD6A1D1E5F00006AAC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F7FD681D1E5F00006AAC9F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +20,7 @@
 		07F7FD5E1D1E5F00006AAC9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		07F7FD601D1E5F00006AAC9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		07F7FD611D1E5F00006AAC9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		07F7FD641D1E5F00006AAC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07F7FD661D1E5F00006AAC9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		07F7FD691D1E5F00006AAC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07F7FD6B1D1E5F00006AAC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,10 +58,6 @@
 				07F7FD5E1D1E5F00006AAC9F /* AppDelegate.m */,
 				07F7FD601D1E5F00006AAC9F /* ViewController.h */,
 				07F7FD611D1E5F00006AAC9F /* ViewController.m */,
-				07F7FD631D1E5F00006AAC9F /* Main.storyboard */,
-				07F7FD661D1E5F00006AAC9F /* Assets.xcassets */,
-				07F7FD681D1E5F00006AAC9F /* LaunchScreen.storyboard */,
-				07F7FD6B1D1E5F00006AAC9F /* Info.plist */,
 				07F7FD5A1D1E5F00006AAC9F /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -74,6 +66,8 @@
 		07F7FD5A1D1E5F00006AAC9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07F7FD661D1E5F00006AAC9F /* Assets.xcassets */,
+				07F7FD6B1D1E5F00006AAC9F /* Info.plist */,
 				07F7FD5B1D1E5F00006AAC9F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,9 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F7FD6A1D1E5F00006AAC9F /* LaunchScreen.storyboard in Resources */,
 				07F7FD671D1E5F00006AAC9F /* Assets.xcassets in Resources */,
-				07F7FD651D1E5F00006AAC9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,25 +149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		07F7FD631D1E5F00006AAC9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07F7FD641D1E5F00006AAC9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		07F7FD681D1E5F00006AAC9F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07F7FD691D1E5F00006AAC9F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		07F7FD6C1D1E5F00006AAC9F /* Debug */ = {
@@ -264,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jinzhao.-----";
@@ -275,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jinzhao.-----";
