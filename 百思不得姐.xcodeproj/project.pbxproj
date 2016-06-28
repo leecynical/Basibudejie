@@ -11,6 +11,11 @@
 		07F7FD5F1D1E5F00006AAC9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD5E1D1E5F00006AAC9F /* AppDelegate.m */; };
 		07F7FD671D1E5F00006AAC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F7FD661D1E5F00006AAC9F /* Assets.xcassets */; };
 		07F7FD731D1F806F006AAC9F /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD721D1F806F006AAC9F /* XMGTabBarController.m */; };
+		07F7FD761D212BA6006AAC9F /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD751D212BA6006AAC9F /* XMGEssenceViewController.m */; };
+		07F7FD791D212BB5006AAC9F /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD781D212BB5006AAC9F /* XMGNewViewController.m */; };
+		07F7FD7C1D212BCE006AAC9F /* XMGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD7B1D212BCE006AAC9F /* XMGFriendTrendsViewController.m */; };
+		07F7FD7F1D212BD8006AAC9F /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD7E1D212BD8006AAC9F /* XMGMeViewController.m */; };
+		07F7FD821D2130A1006AAC9F /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD811D2130A1006AAC9F /* XMGTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,16 @@
 		07F7FD6B1D1E5F00006AAC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F7FD711D1F806F006AAC9F /* XMGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBarController.h; sourceTree = "<group>"; };
 		07F7FD721D1F806F006AAC9F /* XMGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBarController.m; sourceTree = "<group>"; };
+		07F7FD741D212BA6006AAC9F /* XMGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceViewController.h; sourceTree = "<group>"; };
+		07F7FD751D212BA6006AAC9F /* XMGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceViewController.m; sourceTree = "<group>"; };
+		07F7FD771D212BB5006AAC9F /* XMGNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewViewController.h; sourceTree = "<group>"; };
+		07F7FD781D212BB5006AAC9F /* XMGNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewViewController.m; sourceTree = "<group>"; };
+		07F7FD7A1D212BCE006AAC9F /* XMGFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsViewController.h; sourceTree = "<group>"; };
+		07F7FD7B1D212BCE006AAC9F /* XMGFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsViewController.m; sourceTree = "<group>"; };
+		07F7FD7D1D212BD8006AAC9F /* XMGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeViewController.h; sourceTree = "<group>"; };
+		07F7FD7E1D212BD8006AAC9F /* XMGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeViewController.m; sourceTree = "<group>"; };
+		07F7FD801D2130A1006AAC9F /* XMGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
+		07F7FD811D2130A1006AAC9F /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 				07F7FD5E1D1E5F00006AAC9F /* AppDelegate.m */,
 				07F7FD711D1F806F006AAC9F /* XMGTabBarController.h */,
 				07F7FD721D1F806F006AAC9F /* XMGTabBarController.m */,
+				07F7FD741D212BA6006AAC9F /* XMGEssenceViewController.h */,
+				07F7FD751D212BA6006AAC9F /* XMGEssenceViewController.m */,
+				07F7FD771D212BB5006AAC9F /* XMGNewViewController.h */,
+				07F7FD781D212BB5006AAC9F /* XMGNewViewController.m */,
+				07F7FD7A1D212BCE006AAC9F /* XMGFriendTrendsViewController.h */,
+				07F7FD7B1D212BCE006AAC9F /* XMGFriendTrendsViewController.m */,
+				07F7FD801D2130A1006AAC9F /* XMGTabBar.h */,
+				07F7FD811D2130A1006AAC9F /* XMGTabBar.m */,
+				07F7FD7D1D212BD8006AAC9F /* XMGMeViewController.h */,
+				07F7FD7E1D212BD8006AAC9F /* XMGMeViewController.m */,
 				07F7FD5A1D1E5F00006AAC9F /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -99,6 +124,7 @@
 		07F7FD4F1D1E5F00006AAC9F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XMG;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = lijinzhao;
 				TargetAttributes = {
@@ -143,7 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F7FD731D1F806F006AAC9F /* XMGTabBarController.m in Sources */,
+				07F7FD791D212BB5006AAC9F /* XMGNewViewController.m in Sources */,
 				07F7FD5F1D1E5F00006AAC9F /* AppDelegate.m in Sources */,
+				07F7FD7C1D212BCE006AAC9F /* XMGFriendTrendsViewController.m in Sources */,
+				07F7FD761D212BA6006AAC9F /* XMGEssenceViewController.m in Sources */,
+				07F7FD7F1D212BD8006AAC9F /* XMGMeViewController.m in Sources */,
+				07F7FD821D2130A1006AAC9F /* XMGTabBar.m in Sources */,
 				07F7FD5C1D1E5F00006AAC9F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
