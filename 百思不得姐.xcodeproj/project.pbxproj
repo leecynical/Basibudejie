@@ -16,6 +16,8 @@
 		07F7FD7C1D212BCE006AAC9F /* XMGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD7B1D212BCE006AAC9F /* XMGFriendTrendsViewController.m */; };
 		07F7FD7F1D212BD8006AAC9F /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD7E1D212BD8006AAC9F /* XMGMeViewController.m */; };
 		07F7FD821D2130A1006AAC9F /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD811D2130A1006AAC9F /* XMGTabBar.m */; };
+		07F7FD851D220BF6006AAC9F /* UIView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD841D220BF6006AAC9F /* UIView+XMGExtension.m */; };
+		07F7FD891D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7FD881D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,11 @@
 		07F7FD7E1D212BD8006AAC9F /* XMGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeViewController.m; sourceTree = "<group>"; };
 		07F7FD801D2130A1006AAC9F /* XMGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		07F7FD811D2130A1006AAC9F /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
+		07F7FD831D220BF6006AAC9F /* UIView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMGExtension.h"; sourceTree = "<group>"; };
+		07F7FD841D220BF6006AAC9F /* UIView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMGExtension.m"; sourceTree = "<group>"; };
+		07F7FD861D22154D006AAC9F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		07F7FD871D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XMGExtension.h"; sourceTree = "<group>"; };
+		07F7FD881D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XMGExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,9 @@
 				07F7FD5E1D1E5F00006AAC9F /* AppDelegate.m */,
 				07F7FD711D1F806F006AAC9F /* XMGTabBarController.h */,
 				07F7FD721D1F806F006AAC9F /* XMGTabBarController.m */,
+				07F7FD831D220BF6006AAC9F /* UIView+XMGExtension.h */,
+				07F7FD861D22154D006AAC9F /* PrefixHeader.pch */,
+				07F7FD841D220BF6006AAC9F /* UIView+XMGExtension.m */,
 				07F7FD741D212BA6006AAC9F /* XMGEssenceViewController.h */,
 				07F7FD751D212BA6006AAC9F /* XMGEssenceViewController.m */,
 				07F7FD771D212BB5006AAC9F /* XMGNewViewController.h */,
@@ -83,6 +93,8 @@
 				07F7FD811D2130A1006AAC9F /* XMGTabBar.m */,
 				07F7FD7D1D212BD8006AAC9F /* XMGMeViewController.h */,
 				07F7FD7E1D212BD8006AAC9F /* XMGMeViewController.m */,
+				07F7FD871D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.h */,
+				07F7FD881D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.m */,
 				07F7FD5A1D1E5F00006AAC9F /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -175,6 +187,8 @@
 				07F7FD761D212BA6006AAC9F /* XMGEssenceViewController.m in Sources */,
 				07F7FD7F1D212BD8006AAC9F /* XMGMeViewController.m in Sources */,
 				07F7FD821D2130A1006AAC9F /* XMGTabBar.m in Sources */,
+				07F7FD891D22C68D006AAC9F /* UIBarButtonItem+XMGExtension.m in Sources */,
+				07F7FD851D220BF6006AAC9F /* UIView+XMGExtension.m in Sources */,
 				07F7FD5C1D1E5F00006AAC9F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jinzhao.-----";
@@ -281,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jinzhao.-----";

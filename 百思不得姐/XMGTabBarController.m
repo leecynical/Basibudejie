@@ -42,6 +42,7 @@
     
     [self setChildViewController:[[XMGMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
+    //tabBar属性readonly, 可通过kvc， kvc可直接访问成员变量_tabBar
     [self setValue:[[XMGTabBar alloc] init] forKeyPath:@"tabBar"];
 }
 
@@ -52,6 +53,9 @@
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100) / 100.0 green:arc4random_uniform(100) / 100.0 blue:arc4random_uniform(100) / 100.0 alpha:1.0];
     [self addChildViewController:vc];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 
 

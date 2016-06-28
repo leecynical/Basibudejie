@@ -28,11 +28,15 @@
 {
     [super layoutSubviews];
     
-    self.publishButton.bounds = CGRectMake(0, 0, self.publishButton.currentBackgroundImage.size.width, self.publishButton.currentBackgroundImage.size.height);
-    self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    CGFloat width = self.width;
+    CGFloat height = self.height;
     
-    CGFloat buttonH = self.frame.size.height;
-    CGFloat buttonW = self.frame.size.width / 5;
+    self.publishButton.height = self.publishButton.currentBackgroundImage.size.height;
+    self.publishButton.width = self.publishButton.currentBackgroundImage.size.width;
+    self.publishButton.center = CGPointMake(width * 0.5, height * 0.5);
+    
+    CGFloat buttonH = height;
+    CGFloat buttonW = width / 5;
     CGFloat buttonY = 0;
     NSUInteger index = 0;
     for (UIView *button in self.subviews) {
