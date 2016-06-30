@@ -12,15 +12,16 @@
 #import "XMGFriendTrendsViewController.h"
 #import "XMGMeViewController.h"
 #import "XMGTabBar.h"
+#import "XMGNavigationController.h"
 
 @interface XMGTabBarController ()
 
 @end
 
 @implementation XMGTabBarController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
++(void)initialize
+{
+    //initalize只初始化一次
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
@@ -33,6 +34,10 @@
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     [self setChildViewController:[[XMGEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
@@ -51,10 +56,9 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100) / 100.0 green:arc4random_uniform(100) / 100.0 blue:arc4random_uniform(100) / 100.0 alpha:1.0];
     [self addChildViewController:vc];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
 }
 

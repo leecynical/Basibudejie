@@ -21,6 +21,7 @@
     UIBarButtonItem *settingItem =[UIBarButtonItem itemWithImage:@"mine-setting-icon" highlightImage:@"mine-setting-icon-click" target:self action:@selector(settingButtonClick)];
     UIBarButtonItem *nightModeItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" highlightImage:@"mine-moon-icon-click" target:self action:@selector(nightModeButtonClick)];
     self.navigationItem.rightBarButtonItems = @[settingItem, nightModeItem];
+    self.view.backgroundColor = XMGGlobalBg;
 }
 
 -(void)settingButtonClick
