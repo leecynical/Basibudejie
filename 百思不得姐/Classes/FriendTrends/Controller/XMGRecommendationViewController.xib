@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XMGRecommendationViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="MOA-lA-QYA" id="3KO-Qb-jPX"/>
+                <outlet property="userTableView" destination="jT6-9B-Ofa" id="zi2-20-vNy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOA-lA-QYA">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="hkV-Al-pUv"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="UAM-1o-IvR"/>
+                        <outlet property="delegate" destination="-1" id="mS9-nh-rKG"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jT6-9B-Ofa">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="A8q-OT-JxW"/>
+                        <outlet property="delegate" destination="-1" id="erx-IF-d3D"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MOA-lA-QYA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1hb-7x-dyW"/>
+                <constraint firstItem="jT6-9B-Ofa" firstAttribute="leading" secondItem="MOA-lA-QYA" secondAttribute="trailing" id="1kz-Wj-Ah6"/>
+                <constraint firstAttribute="trailing" secondItem="jT6-9B-Ofa" secondAttribute="trailing" id="74x-la-zPM"/>
+                <constraint firstItem="MOA-lA-QYA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QRi-a9-Ypc"/>
+                <constraint firstAttribute="bottom" secondItem="jT6-9B-Ofa" secondAttribute="bottom" id="ep3-NK-40F"/>
+                <constraint firstAttribute="bottom" secondItem="MOA-lA-QYA" secondAttribute="bottom" id="wo6-fY-3Q1"/>
+                <constraint firstItem="jT6-9B-Ofa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xyh-fu-4Ch"/>
+            </constraints>
+            <point key="canvasLocation" x="288" y="295"/>
+        </view>
+    </objects>
+</document>
