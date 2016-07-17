@@ -8,6 +8,7 @@
 
 #import "XMGFriendTrendsViewController.h"
 #import "XMGRecommendationViewController.h"
+#import "XMGLoginRegisterController.h"
 
 @interface XMGFriendTrendsViewController ()
 
@@ -27,6 +28,11 @@
 {
     XMGRecommendationViewController *vc = [[XMGRecommendationViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)loginRegister
+{
+    XMGLoginRegisterController *login = [[XMGLoginRegisterController alloc] init];
+    [self presentViewController:login animated:YES completion:nil];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "XMGEssenceViewController.h"
+#import "XMGRecommendTagsViewController.h"
 
 @interface XMGEssenceViewController ()
 
@@ -24,7 +25,8 @@
 
 -(void)tagButtonClick
 {
-    XMGLogFunc;
+    XMGRecommendTagsViewController *tags = [[XMGRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:tags animated:YES];
 }
 
 @end
