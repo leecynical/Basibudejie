@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XMGTabBarController.h"
+#import "XMGPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,7 @@
     self.window.rootViewController = [[XMGTabBarController alloc] init];
     
     [self.window makeKeyAndVisible];
+    [XMGPushGuideView show];
     return YES;
 }
 
