@@ -41,6 +41,12 @@
  *  转发
  */
 @property (nonatomic, assign) NSInteger repost;
-
+/**
+ *  新浪加V
+ */
 @property (nonatomic, assign, getter=isSinaV) BOOL sina_v;
+/**
+ *  cell行高
+ */
+@property (nonatomic, assign) CGFloat cellHeight;
 @end

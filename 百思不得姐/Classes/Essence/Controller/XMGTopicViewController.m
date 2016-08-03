@@ -176,6 +176,7 @@ static NSString * const XMGTopicCellID = @"topic";
 #pragma mark - <UITableViewDelegate>
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    XMGTopic *topic = self.topics[indexPath.row];
+    return topic.cellHeight;
 }
 @end

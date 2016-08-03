@@ -38,5 +38,15 @@
         return _create_time;
     }
 }
-
+-(CGFloat)cellHeight
+{
+    if (!_cellHeight) {
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * XMGTopicCellMargin, MAXFLOAT);
+        //计算文字高度
+        CGFloat textHeight = [_text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        _cellHeight = XMGTopicCellTextY + textHeight + XMGTopicCellMargin + XMGTopicCellBottomBarHeight + XMGTopicCellMargin;
+    }
+    return _cellHeight;
+}
 @end

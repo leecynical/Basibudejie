@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostBtn;
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVImageView;
+@property (weak, nonatomic) IBOutlet UILabel *text_label;
 @end
 
 @implementation XMGTopicCell
@@ -49,6 +50,7 @@
     [self setupBtnTitle:self.commentBtn count:topic.comment placeholder:@"评论"];
     
     //[self testDate:topic.create_time];
+    self.text_label.text = topic.text;
 }
 
 //-(void)testDate:(NSString *)date
@@ -76,11 +78,10 @@
  */
 -(void)setFrame:(CGRect)frame
 {
-    static CGFloat margin = 10;
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = XMGTopicCellMargin;
+    frame.size.width -= 2 * XMGTopicCellMargin;
+    frame.size.height -= XMGTopicCellMargin;
+    frame.origin.y += XMGTopicCellMargin;
     
     [super setFrame:frame];
 }
