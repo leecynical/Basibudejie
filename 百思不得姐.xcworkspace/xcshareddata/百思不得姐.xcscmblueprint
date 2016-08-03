@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5A490687AA101A9FC72E303F66135B7F5F065192",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "72A2A7F70495256E3ED915B98FA99955F23837A9" : 0,
+    "5A490687AA101A9FC72E303F66135B7F5F065192" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "780C050D-B839-4BA0-8978-6AB7B7BAE1B9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "72A2A7F70495256E3ED915B98FA99955F23837A9" : "",
+    "5A490687AA101A9FC72E303F66135B7F5F065192" : "%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "百思不得姐",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "百思不得姐.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/leecynical\/Basibudejie.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A490687AA101A9FC72E303F66135B7F5F065192"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/leecynical\/BaiSiBuDeJie.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "72A2A7F70495256E3ED915B98FA99955F23837A9"
+    }
+  ]
+}

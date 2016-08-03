@@ -8,11 +8,7 @@
 
 #import "XMGEssenceViewController.h"
 #import "XMGRecommendTagsViewController.h"
-#import "XMGAllViewController.h"
-#import "XMGPicViewController.h"
-#import "XMGWordViewController.h"
-#import "XMGVideoViewController.h"
-#import "XMGVoiceViewController.h"
+#import "XMGTopicViewController.h"
 
 @interface XMGEssenceViewController ()<UIScrollViewDelegate>
 @property (nonatomic, weak) UIView *indicatorView;
@@ -38,15 +34,25 @@
 
 -(void)setupChildViewControllers
 {
-    XMGAllViewController *all = [[XMGAllViewController alloc] init];
+    XMGTopicViewController *all = [[XMGTopicViewController alloc] init];
+    all.title = @"全部";
+    all.type = XMGTopicTypeAll;
     [self addChildViewController:all];
-    XMGVideoViewController *video = [[XMGVideoViewController alloc] init];
+    XMGTopicViewController *video = [[XMGTopicViewController alloc] init];
+    video.title = @"视频";
+    video.type = XMGTopicTypeVideo;
     [self addChildViewController:video];
-    XMGVoiceViewController *voice = [[XMGVoiceViewController alloc] init];
+    XMGTopicViewController *voice = [[XMGTopicViewController alloc] init];
+    voice.title = @"声音";
+    voice.type = XMGTopicTypeVoice;
     [self addChildViewController:voice];
-    XMGPicViewController *pic = [[XMGPicViewController alloc] init];
+    XMGTopicViewController *pic = [[XMGTopicViewController alloc] init];
+    pic.title = @"图片";
+    pic.type = XMGTopicTypePic;
     [self addChildViewController:pic];
-    XMGWordViewController *word = [[XMGWordViewController alloc] init];
+    XMGTopicViewController *word = [[XMGTopicViewController alloc] init];
+    word.title = @"段子";
+    word.type = XMGTopicTypeWord;
     [self addChildViewController:word];
 }
 
@@ -55,9 +61,9 @@
     //设置标签view
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
-    titlesView.y = 64;
+    titlesView.y = XMGTitlesViewY;
     titlesView.width = self.view.width;
-    titlesView.height = 35;
+    titlesView.height = XMGTitlesViewH;
     [self.view addSubview:titlesView];
     self.titlesView = titlesView;
     
@@ -125,7 +131,7 @@
     contentView.frame = self.view.bounds;
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
-    contentView.contentSize = CGSizeMake(self.contentView.width * self.childViewControllers.count, 0);
+    contentView.contentSize = CGSizeMake(contentView.width * self.childViewControllers.count, 0);
     //
     [self.view insertSubview:contentView atIndex:0];
     self.contentView = contentView;
@@ -157,10 +163,7 @@
     vc.view.y = 0;//controller默认y值20
     vc.view.height = scrollView.height; //设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)
 
-    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    
     [scrollView addSubview:vc.view];
 }
 

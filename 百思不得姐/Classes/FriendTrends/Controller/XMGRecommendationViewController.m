@@ -139,7 +139,7 @@ static NSString * const XMGUserId = @"user";
     self.userTableView.mj_header = header;
     self.userTableView.mj_footer = footer;
     
-    self.userTableView.mj_footer.hidden = YES;
+//    self.userTableView.mj_footer.hidden = YES;
 }
 
 -(void)loadNewUsers
