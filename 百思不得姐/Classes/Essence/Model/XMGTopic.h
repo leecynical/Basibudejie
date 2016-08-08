@@ -46,7 +46,44 @@
  */
 @property (nonatomic, assign, getter=isSinaV) BOOL sina_v;
 /**
+ *  图片宽度
+ */
+@property (nonatomic, assign) CGFloat width;
+/**
+ *  图片高度
+ */
+@property (nonatomic, assign) CGFloat height;
+/**
+ *  小图片url
+ */
+@property (nonatomic, copy) NSString *image_small;
+/**
+ *  中图片url
+ */
+@property (nonatomic, copy) NSString *image_middle;
+/**
+ *  大图片url
+ */
+@property (nonatomic, copy) NSString *image_large;
+/**
+ *  帖子的类型
+ */
+@property (nonatomic, assign) XMGTopicType type;
+/****** 额外的辅助属性 ******/
+/**
  *  cell行高
  */
-@property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+/**
+ *  pic Frame
+ */
+@property (nonatomic, assign, readonly) CGRect picViewF;
+/**
+ *  是否为大图
+ */
+@property (nonatomic, assign, getter=isBigPic) BOOL bigPic;
+/**
+ *  图片下载进度
+ */
+@property (nonatomic, assign) CGFloat picProgress;
 @end

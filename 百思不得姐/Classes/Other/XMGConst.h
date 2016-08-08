@@ -27,3 +27,11 @@ UIKIT_EXTERN CGFloat const XMGTopicCellTextY;
  *  精华－cell-底部工具条高度
  */
 UIKIT_EXTERN CGFloat const XMGTopicCellBottomBarHeight;
+/**
+ *  精华－cell-图片最大高度
+ */
+UIKIT_EXTERN CGFloat const XMGTopicCellPicMaxHeight;
+/**
+ *  精华－cell-图片一旦超过最大高度，就用此高度
+ */
+UIKIT_EXTERN CGFloat const XMGTopicCellPicBreakHeight;

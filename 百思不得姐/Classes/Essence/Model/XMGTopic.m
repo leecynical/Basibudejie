@@ -7,8 +7,29 @@
 //
 
 #import "XMGTopic.h"
+#import <MJExtension.h>
 
 @implementation XMGTopic
+{
+    /**
+     *  readonly属性之生成get,如果重写了get方法，必须重写声明成员变量
+     *  外部引用可通过KVC修改 readonly属性
+     *  [topic setValue: forKeyPath:@"cellHeight"];
+     */
+    CGFloat _cellHeight;
+    CGRect _picViewF;
+}
+/**
+ *  将服务器返回的字段转化为相对好理解的字段，用于属性名
+ */
++(NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"image_small" : @"image0",
+             @"image_middle" : @"image2",
+             @"image_large" : @"image1"
+             };
+}
 
 -(NSString *)create_time
 {
@@ -40,12 +61,32 @@
 }
 -(CGFloat)cellHeight
 {
+    /**
+     *  保证cellHeight不重复计算
+     */
     if (!_cellHeight) {
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * XMGTopicCellMargin, MAXFLOAT);
         //计算文字高度
-        CGFloat textHeight = [_text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat textHeight = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
         
-        _cellHeight = XMGTopicCellTextY + textHeight + XMGTopicCellMargin + XMGTopicCellBottomBarHeight + XMGTopicCellMargin;
+        //计算cell高度
+        //文字部分高度
+        _cellHeight = XMGTopicCellTextY + textHeight + XMGTopicCellMargin;
+        //图片部分高度
+        if (self.type == XMGTopicTypePic) {
+            CGFloat picViewW = maxSize.width;
+            CGFloat picViewH = picViewW * self.height / self.width;
+            
+            if (picViewH >= XMGTopicCellPicMaxHeight) {
+                picViewH = XMGTopicCellPicBreakHeight;
+                self.bigPic = YES;
+            }
+            CGFloat picViewX = XMGTopicCellMargin;
+            CGFloat picViewY = XMGTopicCellTextY + textHeight + XMGTopicCellMargin;
+            _picViewF = CGRectMake(picViewX, picViewY, picViewW, picViewH);
+            _cellHeight += picViewH + XMGTopicCellMargin;
+        }
+        _cellHeight += XMGTopicCellBottomBarHeight + XMGTopicCellMargin;
     }
     return _cellHeight;
 }

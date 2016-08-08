@@ -10,6 +10,7 @@
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
 #import "NSDate+XMGExtension.h"
+#import "XMGTopicPicView.h"
 @interface XMGTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -20,14 +21,26 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVImageView;
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+@property (weak, nonatomic) XMGTopicPicView *picImageView;
 @end
 
 @implementation XMGTopicCell
+
+-(XMGTopicPicView *)picImageView
+{
+    if (!_picImageView) {
+        XMGTopicPicView *picImageView = [XMGTopicPicView topicPicView];
+        [self.contentView addSubview:picImageView];
+        _picImageView = picImageView;
+    }
+    return _picImageView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
     self.backgroundView = bgView;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -51,6 +64,10 @@
     
     //[self testDate:topic.create_time];
     self.text_label.text = topic.text;
+    if (topic.type == XMGTopicTypePic) {
+        self.picImageView.topic = topic;
+        self.picImageView.frame = topic.picViewF;
+    }
 }
 
 //-(void)testDate:(NSString *)date
