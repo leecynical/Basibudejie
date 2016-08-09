@@ -40,9 +40,9 @@
     self.imageView.height = self.imageView.width;
     //设置文字
     self.titleLabel.x = 0;
-    self.titleLabel.y = self.imageView.width;
-    self.titleLabel.width = self.imageView.width;
-    self.titleLabel.height = self.height - self.imageView.width;
+    self.titleLabel.y = self.imageView.height;
+    self.titleLabel.width = self.width;
+    self.titleLabel.height = self.height - self.titleLabel.y;
 }
 
 @end

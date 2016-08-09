@@ -23,25 +23,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //屏幕尺寸
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
-    
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.userInteractionEnabled = YES;
     [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
     [self.scrollView addSubview:imageView];
     self.imageView = imageView;
     
-    CGFloat imageViewW = screenW;
+    CGFloat imageViewW = XMGScreenW;
     CGFloat imageViewH = self.topic.height * imageViewW / self.topic.width;
     
-    if (imageViewH > screenH) {
+    if (imageViewH > XMGScreenH) {
         imageView.frame = CGRectMake(0, 0, imageViewW, imageViewH);
         self.scrollView.contentSize = CGSizeMake(0, imageViewH);
     }else{
         imageView.size = CGSizeMake(imageViewW, imageViewH);
-        imageView.centerY = screenH * 0.5;
+        imageView.centerY = XMGScreenH * 0.5;
     }
     
     [self.progressView setProgress:self.topic.picProgress animated:NO];

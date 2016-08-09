@@ -13,6 +13,8 @@
 		074516C71D4B03BA00BA88F5 /* NSDate+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 074516C61D4B03BA00BA88F5 /* NSDate+XMGExtension.m */; };
 		075C9FD31D57041E00934BBD /* XMGShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075C9FD11D57041E00934BBD /* XMGShowPictureController.m */; };
 		075C9FD41D57041E00934BBD /* XMGShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075C9FD21D57041E00934BBD /* XMGShowPictureController.xib */; };
+		075C9FD81D58B4D800934BBD /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075C9FD61D58B4D800934BBD /* XMGPublishViewController.m */; };
+		075C9FD91D58B4D800934BBD /* XMGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075C9FD71D58B4D800934BBD /* XMGPublishViewController.xib */; };
 		07641BA21D36644C00EA9901 /* XMGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 07641BA11D36644C00EA9901 /* XMGRecommendTag.m */; };
 		07641BA51D36A48E00EA9901 /* XMGRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07641BA41D36A48E00EA9901 /* XMGRecommendTagsViewController.m */; };
 		07641BA91D375F9900EA9901 /* XMGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07641BA71D375F9900EA9901 /* XMGRecommendTagCell.m */; };
@@ -65,6 +67,9 @@
 		075C9FD01D57041E00934BBD /* XMGShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShowPictureController.h; sourceTree = "<group>"; };
 		075C9FD11D57041E00934BBD /* XMGShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShowPictureController.m; sourceTree = "<group>"; };
 		075C9FD21D57041E00934BBD /* XMGShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGShowPictureController.xib; sourceTree = "<group>"; };
+		075C9FD51D58B4D800934BBD /* XMGPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPublishViewController.h; sourceTree = "<group>"; };
+		075C9FD61D58B4D800934BBD /* XMGPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPublishViewController.m; sourceTree = "<group>"; };
+		075C9FD71D58B4D800934BBD /* XMGPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPublishViewController.xib; sourceTree = "<group>"; };
 		07641BA01D36644C00EA9901 /* XMGRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTag.h; sourceTree = "<group>"; };
 		07641BA11D36644C00EA9901 /* XMGRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTag.m; sourceTree = "<group>"; };
 		07641BA31D36A48E00EA9901 /* XMGRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagsViewController.h; sourceTree = "<group>"; };
@@ -407,6 +412,9 @@
 				07F7FDAD1D22D668006AAC9F /* XMGTabBarController.m */,
 				07F7FDBE1D24B57F006AAC9F /* XMGNavigationController.h */,
 				07F7FDBF1D24B57F006AAC9F /* XMGNavigationController.m */,
+				075C9FD51D58B4D800934BBD /* XMGPublishViewController.h */,
+				075C9FD61D58B4D800934BBD /* XMGPublishViewController.m */,
+				075C9FD71D58B4D800934BBD /* XMGPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -505,6 +513,7 @@
 				07C88B421D2758F000D9E539 /* XMGRecommendUserCell.xib in Resources */,
 				07F7FD671D1E5F00006AAC9F /* Assets.xcassets in Resources */,
 				07641BBF1D3CE97300EA9901 /* XMGPushGuideView.xib in Resources */,
+				075C9FD91D58B4D800934BBD /* XMGPublishViewController.xib in Resources */,
 				07641BAA1D375F9900EA9901 /* XMGRecommendTagCell.xib in Resources */,
 				07C88B3A1D26036E00D9E539 /* XMGRecommendCategoryCell.xib in Resources */,
 				07641BB41D39104500EA9901 /* XMGLoginRegisterController.xib in Resources */,
@@ -601,6 +610,7 @@
 				076F12F11D52041700117758 /* XMGTopicPicView.m in Sources */,
 				07F7FDB91D22D668006AAC9F /* UIBarButtonItem+XMGExtension.m in Sources */,
 				07C88B411D2758F000D9E539 /* XMGRecommendUserCell.m in Sources */,
+				075C9FD81D58B4D800934BBD /* XMGPublishViewController.m in Sources */,
 				07A6E48D1D56C88300FA039C /* XMGProgressView.m in Sources */,
 				07641BB31D39104500EA9901 /* XMGLoginRegisterController.m in Sources */,
 			);
