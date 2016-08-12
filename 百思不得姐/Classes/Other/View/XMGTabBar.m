@@ -7,7 +7,7 @@
 //
 
 #import "XMGTabBar.h"
-#import "XMGPublishViewController.h"
+#import "XMGPublishView.h"
 @interface XMGTabBar()
 @property (nonatomic, weak) UIButton *publishButton;
 @end
@@ -30,8 +30,7 @@
 
 -(void)publishBtnClick
 {
-    XMGPublishViewController *publishController = [[XMGPublishViewController alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publishController animated:NO completion:nil];
+    [XMGPublishView show];
 }
 
 -(void)layoutSubviews

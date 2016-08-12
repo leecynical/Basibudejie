@@ -6,4 +6,5 @@ pod "SVProgressHUD", "~> 2.0"
 pod "MJExtension", "~>3.0"
 pod "MJRefresh", "~>3.1"
 pod "DACircularProgress", "~>2.3.1"
+pod "pop", "~>1.0"
 end
