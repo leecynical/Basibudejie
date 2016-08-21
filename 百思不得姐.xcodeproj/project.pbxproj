@@ -29,6 +29,10 @@
 		076F12F11D52041700117758 /* XMGTopicPicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 076F12F01D52041700117758 /* XMGTopicPicView.m */; };
 		076F12F31D52042D00117758 /* XMGTopicPicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076F12F21D52042D00117758 /* XMGTopicPicView.xib */; };
 		07A6E48D1D56C88300FA039C /* XMGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E48C1D56C88300FA039C /* XMGProgressView.m */; };
+		07BA6CD71D654A82005CEFDC /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BA6CD61D654A82005CEFDC /* XMGTopicVoiceView.m */; };
+		07BA6CD91D654A96005CEFDC /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BA6CD81D654A96005CEFDC /* XMGTopicVoiceView.xib */; };
+		07BA6CDC1D69BFAE005CEFDC /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BA6CDB1D69BFAE005CEFDC /* XMGTopicVideoView.m */; };
+		07BA6CDE1D69BFC9005CEFDC /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BA6CDD1D69BFC9005CEFDC /* XMGTopicVideoView.xib */; };
 		07C88B2F1D25660400D9E539 /* XMGRecommendationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C88B2D1D25660400D9E539 /* XMGRecommendationViewController.m */; };
 		07C88B301D25660400D9E539 /* XMGRecommendationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C88B2E1D25660400D9E539 /* XMGRecommendationViewController.xib */; };
 		07C88B321D256C2100D9E539 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C88B311D256C2100D9E539 /* Foundation+Log.m */; };
@@ -94,6 +98,12 @@
 		076F12F21D52042D00117758 /* XMGTopicPicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPicView.xib; sourceTree = "<group>"; };
 		07A6E48B1D56C88300FA039C /* XMGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGProgressView.h; sourceTree = "<group>"; };
 		07A6E48C1D56C88300FA039C /* XMGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGProgressView.m; sourceTree = "<group>"; };
+		07BA6CD51D654A82005CEFDC /* XMGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVoiceView.h; sourceTree = "<group>"; };
+		07BA6CD61D654A82005CEFDC /* XMGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVoiceView.m; sourceTree = "<group>"; };
+		07BA6CD81D654A96005CEFDC /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
+		07BA6CDA1D69BFAE005CEFDC /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
+		07BA6CDB1D69BFAE005CEFDC /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
+		07BA6CDD1D69BFC9005CEFDC /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
 		07C88B2C1D25660400D9E539 /* XMGRecommendationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendationViewController.h; sourceTree = "<group>"; };
 		07C88B2D1D25660400D9E539 /* XMGRecommendationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendationViewController.m; sourceTree = "<group>"; };
 		07C88B2E1D25660400D9E539 /* XMGRecommendationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendationViewController.xib; sourceTree = "<group>"; };
@@ -251,6 +261,12 @@
 				076F12F21D52042D00117758 /* XMGTopicPicView.xib */,
 				07A6E48B1D56C88300FA039C /* XMGProgressView.h */,
 				07A6E48C1D56C88300FA039C /* XMGProgressView.m */,
+				07BA6CD51D654A82005CEFDC /* XMGTopicVoiceView.h */,
+				07BA6CD61D654A82005CEFDC /* XMGTopicVoiceView.m */,
+				07BA6CD81D654A96005CEFDC /* XMGTopicVoiceView.xib */,
+				07BA6CDA1D69BFAE005CEFDC /* XMGTopicVideoView.h */,
+				07BA6CDB1D69BFAE005CEFDC /* XMGTopicVideoView.m */,
+				07BA6CDD1D69BFC9005CEFDC /* XMGTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +529,7 @@
 				07C88B421D2758F000D9E539 /* XMGRecommendUserCell.xib in Resources */,
 				07F7FD671D1E5F00006AAC9F /* Assets.xcassets in Resources */,
 				07641BBF1D3CE97300EA9901 /* XMGPushGuideView.xib in Resources */,
+				07BA6CD91D654A96005CEFDC /* XMGTopicVoiceView.xib in Resources */,
 				075C9FD91D58B4D800934BBD /* XMGPublishView.xib in Resources */,
 				07641BAA1D375F9900EA9901 /* XMGRecommendTagCell.xib in Resources */,
 				07C88B3A1D26036E00D9E539 /* XMGRecommendCategoryCell.xib in Resources */,
@@ -520,6 +537,7 @@
 				07F7FDC41D24BFA4006AAC9F /* XMGFriendTrendsViewController.xib in Resources */,
 				075C9FD41D57041E00934BBD /* XMGShowPictureController.xib in Resources */,
 				07C88B301D25660400D9E539 /* XMGRecommendationViewController.xib in Resources */,
+				07BA6CDE1D69BFC9005CEFDC /* XMGTopicVideoView.xib in Resources */,
 				076F12F31D52042D00117758 /* XMGTopicPicView.xib in Resources */,
 				074516C41D48985000BA88F5 /* XMGTopicCell.xib in Resources */,
 			);
@@ -588,10 +606,12 @@
 				07C88B3D1D2754E000D9E539 /* XMGRecommendUser.m in Sources */,
 				076F12EE1D5195A900117758 /* XMGTopicViewController.m in Sources */,
 				07F7FDBD1D22D668006AAC9F /* XMGTabBar.m in Sources */,
+				07BA6CD71D654A82005CEFDC /* XMGTopicVoiceView.m in Sources */,
 				07F7FDC01D24B57F006AAC9F /* XMGNavigationController.m in Sources */,
 				07EF5DEB1D47599D00E5B887 /* XMGTopic.m in Sources */,
 				074516C71D4B03BA00BA88F5 /* NSDate+XMGExtension.m in Sources */,
 				07F7FDB61D22D668006AAC9F /* XMGMeViewController.m in Sources */,
+				07BA6CDC1D69BFAE005CEFDC /* XMGTopicVideoView.m in Sources */,
 				07641BA91D375F9900EA9901 /* XMGRecommendTagCell.m in Sources */,
 				07C88B391D26036E00D9E539 /* XMGRecommendCategoryCell.m in Sources */,
 				07641BA21D36644C00EA9901 /* XMGRecommendTag.m in Sources */,

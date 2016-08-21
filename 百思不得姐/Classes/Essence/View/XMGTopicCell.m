@@ -11,6 +11,8 @@
 #import <UIImageView+WebCache.h>
 #import "NSDate+XMGExtension.h"
 #import "XMGTopicPicView.h"
+#import "XMGTopicVoiceView.h"
+#import "XMGTopicVideoView.h"
 @interface XMGTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -21,19 +23,41 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVImageView;
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
-@property (weak, nonatomic) XMGTopicPicView *picImageView;
+@property (weak, nonatomic) XMGTopicPicView *picView;
+@property (weak, nonatomic) XMGTopicVoiceView *voiceView;
+@property (weak, nonatomic) XMGTopicVideoView *videoView;
 @end
 
 @implementation XMGTopicCell
 
--(XMGTopicPicView *)picImageView
+-(XMGTopicPicView *)picView
 {
-    if (!_picImageView) {
-        XMGTopicPicView *picImageView = [XMGTopicPicView topicPicView];
-        [self.contentView addSubview:picImageView];
-        _picImageView = picImageView;
+    if (!_picView) {
+        XMGTopicPicView *picView = [XMGTopicPicView topicPicView];
+        [self.contentView addSubview:picView];
+        _picView = picView;
     }
-    return _picImageView;
+    return _picView;
+}
+
+-(XMGTopicVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        XMGTopicVoiceView *voiceView= [XMGTopicVoiceView topicVoiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+-(XMGTopicVideoView *)videoView
+{
+    if (!_videoView) {
+        XMGTopicVideoView *videoView= [XMGTopicVideoView topicVideoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 - (void)awakeFromNib {
@@ -64,9 +88,32 @@
     
     //[self testDate:topic.create_time];
     self.text_label.text = topic.text;
-    if (topic.type == XMGTopicTypePic) {
-        self.picImageView.topic = topic;
-        self.picImageView.frame = topic.picViewF;
+    if (topic.type == XMGTopicTypePic) {//图片帖子
+        self.picView.hidden = NO;
+        self.picView.topic = topic;
+        self.picView.frame = topic.picViewF;
+        
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == XMGTopicTypeVoice) { //声音帖子
+        self.voiceView.hidden = NO;
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceViewF;
+        
+        self.picView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == XMGTopicTypeVideo) {//视频帖子
+        self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoViewF;
+        
+        self.voiceView.hidden = YES;
+        self.picView.hidden = YES;
+    }else{//段子帖子
+        //避免cell循环调用
+        self.picView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 }
 

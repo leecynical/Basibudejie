@@ -209,7 +209,7 @@
                 <outlet property="sinaVImageView" destination="u98-h4-lUp" id="1n3-AL-A2R"/>
                 <outlet property="text_label" destination="kKs-TB-yA5" id="hmY-yJ-ixM"/>
             </connections>
-            <point key="canvasLocation" x="89.5" y="267"/>
+            <point key="canvasLocation" x="250.5" y="281"/>
         </tableViewCell>
     </objects>
     <resources>

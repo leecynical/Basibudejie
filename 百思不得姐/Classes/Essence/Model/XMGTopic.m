@@ -17,7 +17,6 @@
      *  [topic setValue: forKeyPath:@"cellHeight"];
      */
     CGFloat _cellHeight;
-    CGRect _picViewF;
 }
 /**
  *  将服务器返回的字段转化为相对好理解的字段，用于属性名
@@ -73,7 +72,7 @@
         //文字部分高度
         _cellHeight = XMGTopicCellTextY + textHeight + XMGTopicCellMargin;
         //图片部分高度
-        if (self.type == XMGTopicTypePic) {
+        if (self.type == XMGTopicTypePic) {//图片帖子
             CGFloat picViewW = maxSize.width;
             CGFloat picViewH = picViewW * self.height / self.width;
             
@@ -84,7 +83,23 @@
             CGFloat picViewX = XMGTopicCellMargin;
             CGFloat picViewY = XMGTopicCellTextY + textHeight + XMGTopicCellMargin;
             _picViewF = CGRectMake(picViewX, picViewY, picViewW, picViewH);
-            _cellHeight += picViewH + XMGTopicCellMargin;
+            //_cellHeight += picViewH + XMGTopicCellMargin;
+            _cellHeight = CGRectGetMaxY(_picViewF) + XMGTopicCellMargin;
+        }else if (self.type == XMGTopicTypeVoice) {//声音帖子
+            CGFloat voiceViewX = XMGTopicCellMargin;
+            CGFloat voiceViewY = XMGTopicCellTextY + textHeight + XMGTopicCellMargin;
+            CGFloat voiceViewW = maxSize.width;
+            CGFloat voiceViewH = voiceViewW * self.height / self.width;
+            _voiceViewF = CGRectMake(voiceViewX, voiceViewY, voiceViewW, voiceViewH);
+            _cellHeight = CGRectGetMaxY(_voiceViewF) + XMGTopicCellMargin;
+        }else if (self.type == XMGTopicTypeVideo) {//视频帖子
+            CGFloat videoViewX = XMGTopicCellMargin;
+            CGFloat videoViewY = XMGTopicCellTextY + textHeight + XMGTopicCellMargin;
+            CGFloat videoViewW = maxSize.width;
+            CGFloat videoViewH = videoViewW * self.height / self.width;
+            _videoViewF = CGRectMake(videoViewX, videoViewY, videoViewW, videoViewH);
+            
+            _cellHeight = CGRectGetMaxY(_videoViewF) + XMGTopicCellMargin;
         }
         _cellHeight += XMGTopicCellBottomBarHeight + XMGTopicCellMargin;
     }

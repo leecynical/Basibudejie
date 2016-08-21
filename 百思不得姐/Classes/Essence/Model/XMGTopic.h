@@ -69,6 +69,18 @@
  *  帖子的类型
  */
 @property (nonatomic, assign) XMGTopicType type;
+/**
+ *  播放次数（声音帖子）
+ */
+@property (nonatomic, assign) NSInteger playcount;
+/**
+ *  播放时长（声音帖子）
+ */
+@property (nonatomic, assign) NSInteger voicetime;
+/**
+ *  播放时长（视频帖子）
+ */
+@property (nonatomic, assign) NSInteger videotime;
 /****** 额外的辅助属性 ******/
 /**
  *  cell行高
@@ -86,4 +98,12 @@
  *  图片下载进度
  */
 @property (nonatomic, assign) CGFloat picProgress;
+/**
+ *  voiceView Frame
+ */
+@property (nonatomic, assign, readonly) CGRect voiceViewF;
+/**
+ *  videoView Frame
+ */
+@property (nonatomic, assign, readonly) CGRect videoViewF;
 @end
