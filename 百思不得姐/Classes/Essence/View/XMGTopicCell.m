@@ -13,6 +13,8 @@
 #import "XMGTopicPicView.h"
 #import "XMGTopicVoiceView.h"
 #import "XMGTopicVideoView.h"
+#import "XMGComment.h"
+#import "XMGUser.h"
 @interface XMGTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -23,9 +25,26 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVImageView;
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+/**
+ *  图片帖子中间的内容
+ */
 @property (weak, nonatomic) XMGTopicPicView *picView;
+/**
+ *  声音帖子中间的内容
+ */
 @property (weak, nonatomic) XMGTopicVoiceView *voiceView;
+/**
+ *  视频帖子中间的内容
+ */
 @property (weak, nonatomic) XMGTopicVideoView *videoView;
+/**
+ *  最热评论view
+ */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+/**
+ *  最热评论内容
+ */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
 @end
 
 @implementation XMGTopicCell
@@ -114,6 +133,17 @@
         self.picView.hidden = YES;
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
+    }
+    /**
+     *  最热评论
+     */
+    XMGComment *top_cmt = [topic.top_cmt firstObject];
+    
+    if (top_cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", top_cmt.user.username, top_cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
     }
 }
 

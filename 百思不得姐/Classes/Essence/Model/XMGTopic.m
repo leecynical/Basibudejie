@@ -8,7 +8,8 @@
 
 #import "XMGTopic.h"
 #import <MJExtension.h>
-
+#import "XMGComment.h"
+#import "XMGUser.h"
 @implementation XMGTopic
 {
     /**
@@ -28,6 +29,11 @@
              @"image_middle" : @"image2",
              @"image_large" : @"image1"
              };
+}
+
++(NSDictionary *)mj_objectClassInArray
+{
+    return @{@"top_cmt": @"XMGComment"};
 }
 
 -(NSString *)create_time
@@ -101,6 +107,15 @@
             
             _cellHeight = CGRectGetMaxY(_videoViewF) + XMGTopicCellMargin;
         }
+        
+        XMGComment *cmt = [self.top_cmt firstObject];
+        //存在最热评论时，最热评论View高度
+        if (cmt) {
+            NSString *cmt_content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            CGFloat cmt_contentH = [cmt_content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize: 13]} context:nil].size.height;
+            _cellHeight += XMGTopicCellTopCmtTitleH + cmt_contentH + XMGTopicCellMargin;
+        }
+        
         _cellHeight += XMGTopicCellBottomBarHeight + XMGTopicCellMargin;
     }
     return _cellHeight;

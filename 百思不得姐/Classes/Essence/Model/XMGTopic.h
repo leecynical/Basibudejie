@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MJExtension.h>
 
 @interface XMGTopic : NSObject
 /**
@@ -81,6 +82,11 @@
  *  播放时长（视频帖子）
  */
 @property (nonatomic, assign) NSInteger videotime;
+/**
+ *  最热评论（）
+ */
+@property (nonatomic, strong) NSArray *top_cmt;
+
 /****** 额外的辅助属性 ******/
 /**
  *  cell行高
@@ -106,4 +112,6 @@
  *  videoView Frame
  */
 @property (nonatomic, assign, readonly) CGRect videoViewF;
+
+
 @end
